@@ -28,7 +28,7 @@
 	// or
 	myPublisher.cancelSubscription(myListener, 'someservice');
 
-### pass methods to your Obervers
+### pass methods to your Observers
 	var methods = {
 		foo: function() {
 			console.log('foo');
