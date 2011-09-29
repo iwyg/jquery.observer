@@ -54,7 +54,7 @@
 
 			/**
 			* @param {Object} subscriber: the subscriber object
-			* @param {String} service: name of service to be cancelled
+			* @param {String} service: name of service to be canceled
 			*/
 			return function (subscriber, service) {
 				var subscribers = this.subscribers, keys = [],
@@ -80,8 +80,8 @@
 		} ()),
 
 		/**
-		* @param {String} service: name of service to be pulished
-		* you can pass additional arguments to the publish methods.
+		* @param {String} service: name of service to be published
+		* you can pass additional arguments to the publish method.
 		*
 		*/
 		publish: function (service) {
@@ -133,8 +133,8 @@
 
 	Subscriber.prototype = {
 		/**
-		* @param {Object} publ: the Publisher to subscribe
-		* @param {String} service: the serive to subscribe to
+		* @param {Object} publ: the Publisher to subscribe to
+		* @param {String} service: the service to subscribe to
 		* @param {Function} fn: the function to be called when service is published
 		* @param {Boolean} proxy: optional, defaults to true
 		* set to false, if you don't want to pass in your Subscriber Object as
@@ -159,8 +159,8 @@
 			return this;
 		},
 		/**
-		* @param {Object} publ: the Publisher to subscribe
-		* @param {String} service: the serive to subscribe to
+		* @param {Object} publisher: the Publisher to unsubscribe from
+		* @param {String} service: the service to unsubsubscribe from
 		*/
 		unsubscribe: function (publisher, service) {
 			publisher.cancelSubscription.call(publisher, this, service);
