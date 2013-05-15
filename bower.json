@@ -1,0 +1,14 @@
+{
+  "name": "jquery.observer",
+  "version": "0.1.1",
+  "main": "./src/jquery.observer",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "jsdom": "*",
+    "jquery": "*"
+  }
+}
+
