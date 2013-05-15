@@ -1,0 +1,26 @@
+{
+  "name": "jQueryObserver",
+  "license":"MIT",
+  "version": "0.1.1",
+  "description": "Minimal, light weight PubSub for jQuery.",
+  "author":"Thomas Appel <mail@thomas-appel.com>",
+  "contributors": [
+    {
+      "name": "Thomas Appel",
+      "email": "mail@thomas-appel.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/iwyg/jquery.observer.git"
+  },
+  "main": "./src/jquery.observer",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "jsdom": "*",
+    "jquery": "*"
+  }
+}

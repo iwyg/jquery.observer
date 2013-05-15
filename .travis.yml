@@ -1,0 +1,4 @@
+language: node
+before_script:
+  - npm install
+script: mocha -R list
