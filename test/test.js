@@ -1,5 +1,5 @@
 var jsdom = require('jsdom'),
-jQuery = require("jQuery"),
+jQuery = require("jquery"),
 window = jsdom.jsdom("<html><body></body></html>").createWindow(),
 document = window.document,
 $ = global.jQuery = jQuery.create(window);
