@@ -3,7 +3,7 @@
 
 ### Simple case scenario:
 
-```
+```js
 
 // define your Publisher and Subscriber
 // you can also call $.Observer that inherits all methods 
@@ -33,7 +33,7 @@ myPublisher.cancelSubscription(myListener, 'someservice');
 
 ### pass methods to your Observers
 
-```
+```js
 var methods = {
 	foo: function() {
 		console.log('foo');
@@ -46,11 +46,17 @@ myPublisher.foo(); // logs 'foo'
 
 ### chainable
 
-```
+```js
 // Observers are chainable
 var myObserver = $.Observer();	
 myObserver.subscribe(PublisherA, 'serviceA', function (){ … }).unsubscribe(PublisherB, 'serviceB').publish('someservice', args);
 ```
 	
+### run mocha tests
+
+```sh
+> npm install
+> mocha
+```
 
 ### more examples to come	
