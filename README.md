@@ -1,4 +1,5 @@
-# A Observer Model on Top of the jQuery Javascript Library
+# A light-weight PubSub module on Top of jQuery 
+
 ## Usage
 
 ### Simple case scenario:

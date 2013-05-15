@@ -38,6 +38,8 @@
         var that = this,
         i, sl, s;
 
+        methods = methods || {};
+
         if (typeof options === 'string') {
             options = {
                 name: options
@@ -61,6 +63,8 @@
                 s.host.subscribe.apply(s.host, [that, s.event, s.fn, s.bind]);
             }
         }
+
+        Publisher.prototype = $.extend(Publisher.prototype, methods);
     }
 
     Publisher.defaults = {
@@ -218,18 +222,21 @@
     };
 
     Observer = Publisher;
-    Observer.prototype = $.extend({},
-    Publisher.prototype, Subscriber.prototype);
+    Observer.prototype = $.extend({
+        on: function (event, callback) {
+            return this.subscribe(this, event, callback);
+        }
+    }, Publisher.prototype, Subscriber.prototype);
 
     exports = {
-        Observer: function (options) {
-            return new Observer(options);
+        Observer: function (options, methods) {
+            return new Observer(options, methods);
         },
-        Publisher: function (options) {
-            return new Publisher(options);
+        Publisher: function (options, methods) {
+            return new Publisher(options, methods);
         },
-        Subscriber: function (options) {
-            return new Subscriber(options);
+        Subscriber: function (options, methods) {
+            return new Subscriber(options, methods);
         }
     };
 
