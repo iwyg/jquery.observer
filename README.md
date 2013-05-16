@@ -1,5 +1,7 @@
 # A light-weight PubSub module on Top of jQuery 
 
+[![Build Status](https://secure.travis-ci.org/iwyg/jquery.observer.png?branch=master)](https://travis-ci.org/iwyg/jquery.observer)
+
 ## Usage
 
 ### Simple case scenario:
@@ -57,7 +59,7 @@ myObserver.subscribe(PublisherA, 'serviceA', function (){ … }).unsubscribe(Pub
 
 ```sh
 > npm install
-> mocha
+> mocha -R list
 ```
 
 ### more examples to come	
