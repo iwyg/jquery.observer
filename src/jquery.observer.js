@@ -240,13 +240,10 @@
         }
     };
 
-    if (typeof global.define === 'function') {
-        global.define('jqueryobserver', function () {
-            return exports;
-        });
-    } else if (typeof module !== undefined) {
+    if (typeof module !== 'undefined') {
         module.exports = exports;
     } else {
         $.extend($, exports);
     }
+
 }(this));
