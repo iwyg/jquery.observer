@@ -28,7 +28,7 @@
     isObject = function (obj) {
         return obj && obj.toString().toLowerCase() === '[object object]';
     },
-    $ = (typeof require !== undefined || (global.define && global.define.amd)) ? require('jQuery') : global.jQuery;
+    $ = (typeof require !== undefined || (global.define && global.define.amd)) ? require('jquery') : global.jQuery;
 
     /**
      * @param {Mixed} options: String or Obejct

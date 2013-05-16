@@ -16,7 +16,7 @@ describe('Observer', function () {
         }});
 
         it('observer should inherit passed methods', function (done) {
-            if (typeof observer.foo === 'function') {
+            if (typeof observer.foo === 'function' && typeof observer.publish === 'function') {
                 done();
             }
         });
@@ -25,12 +25,8 @@ describe('Observer', function () {
                 done();
             }
         });
-
-        it('should still work', function (done) {
-            observer.subscribe(observer, 'event', done);
-            observer.publish('event');
-        });
     });
+
     describe('#publish', function () {
         var observer = jQuery.Observer(),
         subscriber = jQuery.Subscriber();
